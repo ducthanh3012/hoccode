@@ -8,17 +8,21 @@ int main(){
 		printf("Nhap phan tu thu %d:\n",i);
 		scanf("%d",&ary[i]);
 	}
-	int min;
+	int min=0;
 	for (int i=0;i<n;i++){
 		if(ary[i]>0){
 			min=ary[i];
 			break;
 		}
 	}
-	for(int i=0;i<n;i++){
-		if(ary[i]>0&&ary[i]<min){
+	if(min==0)
+		printf("Khong co so duong nao\n");
+	else{
+		for(int i=0;i<n;i++){
+			if(ary[i]>0&&ary[i]<min){
 			min=ary[i];
+			}
 		}
+		printf("So nguyen duong nho nhat: %d\n",min);
 	}
-	printf("So nguyen duong nho nhat: %d\n",min);
 }
